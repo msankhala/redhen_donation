@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drupal Module Upgrader analysis report</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,700,600' rel='stylesheet' type='text/css' />
+    <style type="text/css">
+    <!--
+
+body {
+  width: 80%;
+  color: #343434;
+  margin: 1em auto;
+  font-family: 'Open Sans', Verdana, sans-serif;
+}
+
+details {
+  font-size: 18px;
+  line-height: 25px;
+  margin-bottom: 2em;
+  display: list-item;
+  list-style: none;
+}
+
+details summary {
+  padding: 1em;
+  margin-bottom: 1em;
+  display: list-item;
+  cursor: pointer;
+}
+
+details.error summary {
+  background-color: #ffd5d5;
+}
+
+details.warning summary {
+  background-color: #fff3bb;
+}
+
+a {
+  color: #095cb1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+aside {
+  font-style: italic;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.group {
+  border: 1px solid #ececec;
+  padding: 1em;
+  display: block;
+}
+
+.group > summary {
+  padding: 0;
+  color: #c8c8c8;
+  margin-bottom: 0;;
+  font-weight: bold;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  display: list-item;
+}
+
+.group[open] > summary {
+  margin-bottom: 1em;
+}
+
+.group > details:last-child {
+  margin-bottom: 0;
+}
+
+    -->
+    </style>
+  </head>
+  <body>
+    <h1>Drupal Module Upgrader analysis report</h1>
+      <details open="true" class="group">
+      <summary></summary>
+          <details class="error">
+      <summary><code>confirm_form()</code> is now <code>\Drupal\Core\Form\ConfirmFormBase</code></summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1945416"><code>confirm_form()</code> removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation_type.ui_controller.inc, line 32</li>
+            </ul>
+                  <aside>Flagged by _function_call:confirm_form</aside>    </details>
+    <details class="error">
+      <summary><code>current_path()</code> has been replaced by the <current> route.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2382211"><code>current_path()</code> replaced by the <current> route</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1460</li>
+            </ul>
+                  <aside>Flagged by _function_call:current_path</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_array_merge_deep()</code> has been moved into the NestedArray utility class.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1870678"><code>drupal_array_*</code> functions replaced by static methods of <code>NestedArray</code> utility</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 346</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_array_merge_deep</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_render()</code> has been removed.</summary>
+
+      
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1147</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1226</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1227</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_render</aside>    </details>
+    <details class="error">
+      <summary><code>element_children()</code> is now a method of the <code>Element</code> class.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2173683"><code>element_*</code> functions moved into <code>Element</code> class</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 476</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 774</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1141</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1144</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1424</li>
+            </ul>
+                  <aside>Flagged by _function_call:element_children</aside>    </details>
+    <details class="error">
+      <summary><code>entity_create()</code> is now a method of <code>EntityInterface</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845"><code>entity_create()</code> replaced by <code>EntityInterface::create()</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 210</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 313</li>
+            </ul>
+                  <aside>Flagged by _function_call:entity_create</aside>    </details>
+    <details class="error">
+      <summary><code>entity_extract_ids()</code> replaced by methods of <code>EntityInterface</code></summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1724986"><code>entity_extract_ids()</code> removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 247</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 263</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 31</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 54</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 108</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 458</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 537</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 570</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 648</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1343</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1406</li>
+            </ul>
+                  <aside>Flagged by _function_call:entity_extract_ids</aside>    </details>
+    <details class="error">
+      <summary><code>entity_get_info()</code> is now a method of the EntityManager service.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1929006"><code>entity_get_info()</code> is deprecated</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 208</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 311</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1374</li>
+            </ul>
+                  <aside>Flagged by _function_call:entity_get_info</aside>    </details>
+    <details class="error">
+      <summary><code>entity_load()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845">Entities are now classed objects implementing <code>EntityInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.install, line 318</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1183</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1056</li>
+            </ul>
+                  <aside>Flagged by _function_call:entity_load</aside>    </details>
+    <details class="error">
+      <summary><code>entity_label()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845">Entities are now classed objects implementing <code>EntityInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation_type.ui_controller.inc, line 29</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 38</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 109</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 141</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 59</li>
+            </ul>
+                  <aside>Flagged by _function_call:entity_label</aside>    </details>
+    <details class="error">
+      <summary><code>user_load()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845">Entities are now classed objects implementing <code>EntityInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 374</li>
+            </ul>
+                  <aside>Flagged by _function_call:user_load</aside>    </details>
+    <details class="error">
+      <summary><code>user_save()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2266845">Entities are now classed objects implementing <code>EntityInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 959</li>
+            </ul>
+                  <aside>Flagged by _function_call:user_save</aside>    </details>
+    <details class="error">
+      <summary><code>field_update_instance()</code> is now <code>FieldConfig::save()</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2012896">Field CRUD API replaced by Entity API</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.install, line 295</li>
+            </ul>
+                  <aside>Flagged by _function_call:field_update_instance</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_get_form()</code> has moved into the FormBuilder service.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2121003">Form generation functions moved into FormBuilder service</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 271</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 34</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 56</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_get_form</aside>    </details>
+    <details class="error">
+      <summary><code>form_set_error()</code> is now a method of <code>FormStateInterface</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2121003">Form functions moved into <code>FormStateInterface</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 302</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 336</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 495</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 504</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 375</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 378</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 383</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 388</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 398</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 807</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 828</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 831</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1514</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1517</li>
+            </ul>
+                  <aside>Flagged by _function_call:form_set_error</aside>    </details>
+    <details class="error">
+      <summary><code>l()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2346779"><code>l()</code> replaced by URL generation API</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 130</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 143</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 159</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 165</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 67</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 231</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 332</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 339</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 69</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 82</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 94</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 167</li>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 273</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1069</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 127</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 134</li>
+            </ul>
+                  <aside>Flagged by _function_call:l</aside>    </details>
+    <details class="error">
+      <summary><code>menu_get_item()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2203305"><code>menu_get_item()</code> removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1272</li>
+            </ul>
+                  <aside>Flagged by _function_call:menu_get_item</aside>    </details>
+    <details class="error">
+      <summary><code>module_invoke_all()</code> is now a method of the <code>module_handler</code> service.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1894902"><code>module_invoke_all()</code> replaced by <code>module_handler</code> service</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 360</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1212</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 281</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1026</li>
+            </ul>
+                  <aside>Flagged by _function_call:module_invoke_all</aside>    </details>
+    <details class="error">
+      <summary><code>theme()</code> has been renamed to <code>_theme()</code>, and should never be called directly.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2195739"><code>theme()</code> renamed to <code>_theme()</code> and should not be called directly</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 251</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 181</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.pages.inc, line 181</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1175</li>
+            </ul>
+                  <aside>Flagged by _function_call:theme</aside>    </details>
+    <details class="error">
+      <summary>The core token API is now a service.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1973488">Token API is now a service</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1102</li>
+            </ul>
+                  <aside>Flagged by _function_call:token_replace</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_get_query_parameters()</code> has been replaced by the <code>UrlHelper</code> utility.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2079005"><code>drupal_get_query_parameters()</code> is now a method of <code>\Drupal\Component\Utility\UrlHelper</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 742</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_get_query_parameters</aside>    </details>
+    <details class="error">
+      <summary><code>user_access()</code> is now <code>AccountInterface::hasPermission()</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2049309"><code>user_access()</code> got converted to a method on the user/account interface</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/lib/redhen_donation.entity.inc, line 98</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 345</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 354</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 369</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 383</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 383</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 386</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 386</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 389</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 389</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 424</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 494</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 497</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 729</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 729</li>
+            </ul>
+                  <aside>Flagged by _function_call:user_access</aside>    </details>
+    <details class="error">
+      <summary><code>variable_get()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2183531">The Variable API has been removed</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 122</li>
+            </ul>
+                  <aside>Flagged by _function_call:variable_get</aside>    </details>
+    <details class="error">
+      <summary><code>watchdog()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2270941"><code>watchdog()</code> is deprecated</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 928</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 966</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1096</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1125</li>
+            </ul>
+                  <aside>Flagged by _function_call:watchdog</aside>    </details>
+    <details class="error">
+      <summary><code>drupal_set_message()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2774931"><code>drupal_set_message()</code> moved into stream wrapper manager service.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 68</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 232</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation_type.admin.inc, line 340</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 635</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 1373</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1060</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1112</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1124</li>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.forms.inc, line 1538</li>
+            </ul>
+                  <aside>Flagged by _function_call:drupal_set_message</aside>    </details>
+    <details class="error">
+      <summary><code>db_delete()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2993033"><code>db_delete()</code> is deprecated.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 539</li>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 543</li>
+            </ul>
+                  <aside>Flagged by _function_call:db_delete</aside>    </details>
+    <details class="error">
+      <summary><code>db_select()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2993033"><code>db_select()</code> is deprecated.</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 596</li>
+            </ul>
+                  <aside>Flagged by _function_call:db_select</aside>    </details>
+    <details class="warning">
+      <summary>Many common functions, shared variables, and constants have been renamed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2324935">The global theme variables have been replaced by an ActiveTheme object</a></li>
+              </ul>
+      
+                      </details>
+    <details class="error">
+      <summary>Classes must be PSR-4 compliant.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2246699">PSR-4 compatible class loader in Drupal core</a></li>
+              </ul>
+      
+                      </details>
+    <details class="error">
+      <summary><code>hook_entity_info()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1827470">Entity types are now annotated plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 11</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:entity_info</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_formatter_info()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1805846">Field formatters are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 138</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_formatter_info</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_formatter_settings_form()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1805846">Field formatters are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 167</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_formatter_settings_form</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_formatter_settings_summary()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1805846">Field formatters are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 199</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_formatter_settings_summary</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_formatter_view()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1805846">Field formatters are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 228</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_formatter_view</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_info()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2064123">Field types are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 8</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_info</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_instance_settings_form()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2064123">Field types are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 38</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_instance_settings_form</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_is_empty()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2064123">Field types are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 91</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_is_empty</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_schema()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/2064123">Field types are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.install, line 253</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_schema</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_widget_form()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1796000">Field widgets are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 118</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_widget_form</aside>    </details>
+    <details class="error">
+      <summary><code>hook_field_widget_info()</code> has been removed.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1796000">Field widgets are now plugins</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/includes/redhen_donation.field.inc, line 101</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:field_widget_info</aside>    </details>
+    <details class="error">
+      <summary><code>hook_menu()</code> has been removed from Drupal 8.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1800686">All functionality of <code>hook_menu()</code> replaced</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2177901">Dynamic routes are now defined in <code>MODULE.routing.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2119699">Page callbacks have been converted to controller classes</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2089605">Route naming convention</a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2165243">Contextual links are now plugins defined in <code>MODULE.links.contextual.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2007444">Local actions are now plugins defined in <code>MODULE.links.action.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2044515">Local tasks and now plugins defined in <code>MODULE.links.task.yml</code></a></li>
+                <li><a target="_blank" href="https://www.drupal.org/node/2228089">Menu links are now defined in <code>MODULE.links.menu.yml</code></a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.module, line 165</li>
+            </ul>
+                  <aside>Flagged by _flag_hook:menu</aside>    </details>
+    <details class="error">
+      <summary>Module info files' <code>core</code> key must have a value of <code>8.x</code>.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+    <details class="error">
+      <summary>Info files must contain a <code>type</code> key.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708#type"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+    <details class="error">
+      <summary>Many common dependencies have moved into core.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+    <details class="error">
+      <summary>Modules no longer declare classes in their info file.</summary>
+
+      
+            <h5>Documentation</h5>
+      <ul>
+                <li><a target="_blank" href="https://www.drupal.org/node/1935708#files"><code>.info</code> files are now <code>.info.yml</code> files</a></li>
+              </ul>
+      
+            <h5>Files Affected</h5>
+      <ul>
+              <li>modules/custom/redhen/redhen_donation/redhen_donation.info</li>
+            </ul>
+                  <aside>Flagged by info</aside>    </details>
+
+    </details>
+    </body>
+</html>

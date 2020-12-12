@@ -1,0 +1,12 @@
+name: 'RedHen Donations'
+description: 'Create single page campaigns to collect donations and contacts.'
+package: RedHen
+core: 8.x
+dependencies:
+  redhen_contact: 'drupal:redhen_contact'
+  commerce_checkout: 'commerce_checkout:commerce_checkout'
+  commerce_product: 'commerce_product:commerce_product'
+  commerce_recurring: 'commerce_recurring:commerce_recurring'
+  # commerce_cardonfile: 'commerce_cardonfile:commerce_cardonfile'
+  select_or_other: 'select_or_other:select_or_other'
+type: module
