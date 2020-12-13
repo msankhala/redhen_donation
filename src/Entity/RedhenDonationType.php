@@ -1,6 +1,7 @@
 <?php
-namespace Drupal\redhen_donation;
+namespace Drupal\redhen_donation\Entity;
 
+use Drupal\Core\Config\Entity\ConfigEntityBundleBase;
 use Drupal\redhen_donation\RedhenDonationTypeInterface;
 
 /**
@@ -10,14 +11,14 @@ use Drupal\redhen_donation\RedhenDonationTypeInterface;
  *   id = "redhen_donation_type",
  *   label = @Translation("Redhen Donation type"),
  *   handlers = {
- *     "list_builder" = "Drupal\redhen_donation\ContactTypeListBuilder",
+ *     "list_builder" = "Drupal\redhen_donation\RedhenDonationTypeListBuilder",
  *     "form" = {
- *       "add" = "Drupal\redhen_donation\Form\ContactTypeForm",
- *       "edit" = "Drupal\redhen_donation\Form\ContactTypeForm",
- *       "delete" = "Drupal\redhen_donation\Form\ContactTypeDeleteForm"
+ *       "add" = "Drupal\redhen_donation\Form\RedhenDonationTypeForm",
+ *       "edit" = "Drupal\redhen_donation\Form\RedhenDonationTypeForm",
+ *       "delete" = "Drupal\redhen_donation\Form\RedhenDonationTypeDeleteForm"
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\redhen_donation\ContactTypeHtmlRouteProvider",
+ *       "html" = "Drupal\redhen_donation\RedhenDonationTypeHtmlRouteProvider",
  *     },
  *   },
  *   config_prefix = "redhen_donation_type",
@@ -38,21 +39,25 @@ use Drupal\redhen_donation\RedhenDonationTypeInterface;
  * )
  */
 class RedhenDonationType extends ConfigEntityBundleBase implements RedhenDonationTypeInterface {
-}
-class RedhenDonationType extends Entity {
-
-  public $name;
-  public $label;
-  public $locked;
 
   /**
-   * Type constructor.
+   * The Redhen Donation type name.
    *
-   * @param array $values
-   *   Values array.
+   * @var string
    */
-  public function __construct($values = array()) {
-    parent::__construct($values, 'redhen_donation_type');
-  }
+  protected $name;
 
+  /**
+   * The Redhen Donation type label.
+   *
+   * @var string
+   */
+  protected $label;
+
+  /**
+   * The Redhen Donation type locked state.
+   *
+   * @var string
+   */
+  protected $locked;
 }

@@ -1,5 +1,5 @@
 <?php
-namespace Drupal\redhen_donation;
+namespace Drupal\redhen_donation\Entity;
 
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
@@ -26,10 +26,10 @@ use Drupal\redhen_donation\RedhenDonationInterface;
  *     "views_data" = "Drupal\views\EntityViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\redhen_donation\Form\DonationForm",
- *       "add" = "Drupal\redhen_donation\Form\DonationForm",
- *       "edit" = "Drupal\redhen_donation\Form\DonationForm",
- *       "delete" = "Drupal\redhen_donation\Form\DonationDeleteForm",
+ *       "default" = "Drupal\redhen_donation\Form\RedhenDonationForm",
+ *       "add" = "Drupal\redhen_donation\Form\RedhenDonationForm",
+ *       "edit" = "Drupal\redhen_donation\Form\RedhenDonationForm",
+ *       "delete" = "Drupal\redhen_donation\Form\RedhenDonationDeleteForm",
  *     },
  *     "access" = "Drupal\redhen_donation\DonationAccessControlHandler",
  *     "route_provider" = {

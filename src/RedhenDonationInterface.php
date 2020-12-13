@@ -6,26 +6,19 @@ use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 
 /**
- * Provides an interface for defining Contact entities.
+ * Provides an interface for defining Redhen donation entities.
  *
- * @ingroup redhen_contact
+ * @ingroup redhen_donation
  */
 interface RedhenDonationInterface extends ContentEntityInterface, EntityChangedInterface {
   /**
-   * Gets the Contact type.
+   * Gets the Redhen Donation type.
    *
    * @return string
-   *   The Contact type.
+   *   The Redhen Donation type.
    */
   public function getType();
 
-  /**
-   * Gets the full Contact name.
-   *
-   * @return string
-   *   Name of the Contact.
-   */
-  public function getFullName();
 
   /**
    * Sets the Contact name.
@@ -39,21 +32,21 @@ interface RedhenDonationInterface extends ContentEntityInterface, EntityChangedI
   public function setName($name);
 
   /**
-   * Gets the Contact creation timestamp.
+   * Gets the Redhen Donation creation timestamp.
    *
    * @return int
-   *   Creation timestamp of the Contact.
+   *   Creation timestamp of the Redhen Donation.
    */
   public function getCreatedTime();
 
   /**
-   * Sets the Contact creation timestamp.
+   * Sets the Redhen Donation creation timestamp.
    *
    * @param int $timestamp
-   *   The Contact creation timestamp.
+   *   The Redhen Donation creation timestamp.
    *
    * @return \Drupal\redhen_donation\RedhanDonationInterface
-   *   The called Contact entity.
+   *   The called Redhen Donation entity.
    */
   public function setCreatedTime($timestamp);
 
@@ -68,7 +61,7 @@ interface RedhenDonationInterface extends ContentEntityInterface, EntityChangedI
    * @return bool
    *   TRUE if the Contact is active.
    */
-  public function isActive();
+  // public function isActive();
 
   /**
    * Sets the active status of a Contact.
@@ -79,6 +72,6 @@ interface RedhenDonationInterface extends ContentEntityInterface, EntityChangedI
    * @return \Drupal\redhen_donation\RedhanDonationInterface
    *   The called Contact entity.
    */
-  public function setActive($active);
+  // public function setActive($active);
 
 }
