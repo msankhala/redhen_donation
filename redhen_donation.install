@@ -236,14 +236,14 @@ function redhen_donation_schema() {
   );
 
   // Create cache bins for Entity-cache module.
-  $cache_schema = drupal_get_schema_unprocessed('system', 'cache');
+  // $cache_schema = drupal_get_schema_unprocessed('system', 'cache');
   $types = array(
     'redhen_donation',
     'redhen_donation_type',
   );
 
   foreach ($types as $type) {
-    $schema["cache_entity_$type"] = $cache_schema;
+    // $schema["cache_entity_$type"] = $cache_schema;
     $schema["cache_entity_$type"]['description'] = "Cache table used to store $type entity records.";
   }
 
