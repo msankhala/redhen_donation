@@ -7,6 +7,7 @@ namespace Drupal\redhen_donation\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Field\FieldItemListInterface;
 
 /**
  * @FieldFormatter(
@@ -30,7 +31,7 @@ class RedhenDonationDefault extends FormatterBase {
   /**
    * {@inheritdoc}
    */
-  public function viewElements(FieldItemListInterface $items) {
+  public function viewElements(FieldItemListInterface $items, $langcode = NULL) {
 //      $elements = array();
 //      $countries = \Drupal::service('country_manager')->getList();
 //      foreach ($items as $delta => $item) {

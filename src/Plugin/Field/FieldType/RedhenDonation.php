@@ -28,8 +28,8 @@ class RedhenDonation extends FieldItemBase {
     return [
       'columns' => [
         'redhen_donation_type' => [
-          'type' => 'varchart',
-          'length' => 32,
+          'type' => 'varchar',
+          'length' => 128,
           'not null' => FALSE,
         ],
       ],
@@ -60,14 +60,22 @@ class RedhenDonation extends FieldItemBase {
    * {@inheritdoc}
    */
   public function fieldSettingsForm(array $form, FormStateInterface $form_state) {
-
-    $form['donate_tab'] = array(
+    // kint(get_class_methods($this));
+    // kint($this->getFieldDefinition()->getSettings());
+    // kint($this->getFieldDefinition()->getTargetEntityTypeId());
+    $entityType = $this->getFieldDefinition()->getTargetEntityTypeId();
+    // kint($this->getFieldDefinition()->getTargetBundle());
+    $bundle = $this->getFieldDefinition()->getTargetBundle();
+    // $values = $form_state->getValues();
+    // $settings = $this->getSettings();
+    $default_settings = isset($values['settings']['default_redhen_donation_settings']) ? $values['settings']['default_redhen_donation_settings'] : [];
+    $form['donate_tab'] = [
       '#type' => 'checkbox',
       '#title' => t('Enable Donate Tab'),
-      '#default_value' => isset($form_state['donate_tab']) ? $form_state['donate_tab'] : TRUE,
+      '#default_value' => $form_state->getValue('donate_tab', TRUE),
       '#required' => FALSE,
       '#description' => t('Enable a tab on the content displaying the donation form.'),
-    );
+    ];
     // Flatten scheduling and reminder settings since this form is in tree mode.
     foreach ($default_settings as $key => $val) {
       if ($key != 'settings' and is_array($val)) {
@@ -84,39 +92,38 @@ class RedhenDonation extends FieldItemBase {
         unset($default_settings[$key]);
       }
     }
-
-    $form['default_redhen_donation_settings'] = array(
+    $form['default_redhen_donation_settings'] = [
       '#type' => 'fieldset',
       '#title' => t('Default Donation settings'),
       '#collapsible' => TRUE,
       '#description' => t("These settings will be applied when an entity with this field is saved and does not yet have it's own settings applied."),
-    );
+    ];
 
-    $settings_form = redhen_donation_entity_settings_form($form['default_redhen_donation_settings'], $form_state, $default_settings, $instance['entity_type'], NULL, $instance['bundle']);
-
+    $settings_form = redhen_donation_entity_settings_form($form['default_redhen_donation_settings'], $form_state, $default_settings, $entityType, NULL, $bundle);
+    // redhen_donation_entity_settings_form($form['default_redhen_donation_settings'], $form_state, $settings, $entity_type = NULL, $entity_id = NULL, $bundle = NULL, $field = NULL);.
     // Unset the save button just in case.
     unset($settings_form['save']);
 
     $form['default_redhen_donation_settings'] += $settings_form;
 
-    // @todo: validation
+    // @todo validation
     return $form;
   }
+
   /**
    * {@inheritdoc}
    */
-//  public function getConstraints() {
-//    $constraint_manager = \Drupal::typedDataManager()->getValidationConstraintManager();
-//    $constraints = parent::getConstraints();
-//    $constraints[] = $constraint_manager->create('ComplexData', [
-//      'value' => [
-//        'Length' => [
-//          'max' => static::COUNTRY_ISO2_MAXLENGTH,
-//          'maxMessage' => t('%name: the country iso-2 code may not be longer than @max characters.', ['%name' => $this->getFieldDefinition()->getLabel(), '@max' => static::COUNTRY_ISO2_MAXLENGTH]),
-//        ],
-//      ],
-//    ]);
-//    return $constraints;
-//  }
-
+  // Public function getConstraints() {
+  //    $constraint_manager = \Drupal::typedDataManager()->getValidationConstraintManager();
+  //    $constraints = parent::getConstraints();
+  //    $constraints[] = $constraint_manager->create('ComplexData', [
+  //      'value' => [
+  //        'Length' => [
+  //          'max' => static::COUNTRY_ISO2_MAXLENGTH,
+  //          'maxMessage' => t('%name: the country iso-2 code may not be longer than @max characters.', ['%name' => $this->getFieldDefinition()->getLabel(), '@max' => static::COUNTRY_ISO2_MAXLENGTH]),
+  //        ],
+  //      ],
+  //    ]);
+  //    return $constraints;
+  //  }.
 }
